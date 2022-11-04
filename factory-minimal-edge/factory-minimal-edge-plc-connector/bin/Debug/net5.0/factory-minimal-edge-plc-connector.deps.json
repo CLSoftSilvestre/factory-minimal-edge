@@ -1,0 +1,41 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "factory-minimal-edge-plc-connector/1.0.0": {
+        "dependencies": {
+          "S7netplus": "0.14.0"
+        },
+        "runtime": {
+          "factory-minimal-edge-plc-connector.dll": {}
+        }
+      },
+      "S7netplus/0.14.0": {
+        "runtime": {
+          "lib/netstandard2.0/S7.Net.dll": {
+            "assemblyVersion": "0.14.0.0",
+            "fileVersion": "0.14.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "factory-minimal-edge-plc-connector/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "S7netplus/0.14.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9EExFKQhp9s/celBJHxm+ircxykLFZwz4GBk1ufiMspq8eAkidl1hsm1Rn1mUw0wAfzrxtUyJvom1NkK9xIAkg==",
+      "path": "s7netplus/0.14.0",
+      "hashPath": "s7netplus.0.14.0.nupkg.sha512"
+    }
+  }
+}

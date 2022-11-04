@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "SLQ5P4BunZipbWEabV54t7NaOHH9LDdz7yeMuBbO6XSAdhkfaWsg0o3TaZ6dRssZkEJGFKEvGvHPCGO0d6uT3Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\CSilvestre\\GitLab\\factory-minimal-edge\\factory-minimal-edge\\factory-minimal-edge-plc-connector\\factory-minimal-edge-plc-connector.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\CSilvestre\\.nuget\\packages\\s7netplus\\0.14.0\\s7netplus.0.14.0.nupkg.sha512"
+  ],
+  "logs": []
+}
