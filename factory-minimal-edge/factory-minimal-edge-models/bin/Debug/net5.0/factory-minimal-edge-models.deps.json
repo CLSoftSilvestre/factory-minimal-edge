@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "factory-minimal-edge-models/1.0.0": {
+        "runtime": {
+          "factory-minimal-edge-models.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "factory-minimal-edge-models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

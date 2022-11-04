@@ -1,0 +1,12 @@
+C:\Users\CSilvestre\GitLab\factory-minimal-edge\factory-minimal-edge\factory-minimal-edge-models\bin\Debug\net5.0\factory-minimal-edge-models.deps.json
+C:\Users\CSilvestre\GitLab\factory-minimal-edge\factory-minimal-edge\factory-minimal-edge-models\bin\Debug\net5.0\factory-minimal-edge-models.dll
+C:\Users\CSilvestre\GitLab\factory-minimal-edge\factory-minimal-edge\factory-minimal-edge-models\bin\Debug\net5.0\ref\factory-minimal-edge-models.dll
+C:\Users\CSilvestre\GitLab\factory-minimal-edge\factory-minimal-edge\factory-minimal-edge-models\bin\Debug\net5.0\factory-minimal-edge-models.pdb
+C:\Users\CSilvestre\GitLab\factory-minimal-edge\factory-minimal-edge\factory-minimal-edge-models\obj\Debug\net5.0\factory-minimal-edge-models.csproj.AssemblyReference.cache
+C:\Users\CSilvestre\GitLab\factory-minimal-edge\factory-minimal-edge\factory-minimal-edge-models\obj\Debug\net5.0\factory-minimal-edge-models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CSilvestre\GitLab\factory-minimal-edge\factory-minimal-edge\factory-minimal-edge-models\obj\Debug\net5.0\factory-minimal-edge-models.AssemblyInfoInputs.cache
+C:\Users\CSilvestre\GitLab\factory-minimal-edge\factory-minimal-edge\factory-minimal-edge-models\obj\Debug\net5.0\factory-minimal-edge-models.AssemblyInfo.cs
+C:\Users\CSilvestre\GitLab\factory-minimal-edge\factory-minimal-edge\factory-minimal-edge-models\obj\Debug\net5.0\factory-minimal-edge-models.csproj.CoreCompileInputs.cache
+C:\Users\CSilvestre\GitLab\factory-minimal-edge\factory-minimal-edge\factory-minimal-edge-models\obj\Debug\net5.0\factory-minimal-edge-models.dll
+C:\Users\CSilvestre\GitLab\factory-minimal-edge\factory-minimal-edge\factory-minimal-edge-models\obj\Debug\net5.0\ref\factory-minimal-edge-models.dll
+C:\Users\CSilvestre\GitLab\factory-minimal-edge\factory-minimal-edge\factory-minimal-edge-models\obj\Debug\net5.0\factory-minimal-edge-models.pdb
