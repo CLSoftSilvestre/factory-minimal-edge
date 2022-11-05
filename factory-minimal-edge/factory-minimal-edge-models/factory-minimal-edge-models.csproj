@@ -5,4 +5,9 @@
     <RootNamespace>factory_minimal_edge_models</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.17" />
+    <PackageReference Include="S7netplus" Version="0.14.0" />
+  </ItemGroup>
+
 </Project>
