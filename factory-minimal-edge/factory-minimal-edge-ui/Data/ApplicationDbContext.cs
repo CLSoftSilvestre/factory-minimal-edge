@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using factory_minimal_edge_models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -12,5 +13,10 @@ namespace factory_minimal_edge_ui.Data
             : base(options)
         {
         }
+
+        public DbSet<SiemensDevice> SiemensDevices { get; set; }
+
+        public DbSet<SiemensTag> SiemensTags { get; set; }
+
     }
 }

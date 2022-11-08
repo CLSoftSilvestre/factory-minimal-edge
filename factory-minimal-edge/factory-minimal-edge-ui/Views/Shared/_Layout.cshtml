@@ -151,9 +151,6 @@
                                     </select>
                                 </form>
 
-                                <a class="dropdown-item" asp-controller="Tenants" asp-action="CreateFree"><i class="fa fa-building"></i> @HtmlLocalizer["menu.changetenantplan"]</a>
-                                <a class="dropdown-item" asp-controller="TenantUsers" asp-action="Select"><i class="fa fa-address-card"></i> @HtmlLocalizer["menu.associatetenant"]</a>
-                                <a class="dropdown-item" asp-controller="Tenants" asp-action="Select"><i class="fa fa-exchange"></i> @HtmlLocalizer["menu.switchtenant"]</a>
                                 <div class="dropdown-divider"></div>
 
                                 <div class="custom-control custom-switch" style="padding:7px 55px">
@@ -199,80 +196,46 @@
                             </a>
                         </li>
                         <li id="tour-notifications">
-                            <a class="waves-effect waves-dark" asp-area="" asp-controller="Notifications" asp-action="Index" aria-expanded="false">
-                                <i class="fa fa-tags"></i><span class="hide-menu">Notifications</span>
+                            <a class="waves-effect waves-dark" asp-area="" asp-controller="SiemensDevices" asp-action="Index" aria-expanded="false">
+                                <i class="fa fa-server"></i><span class="hide-menu">Input connectors</span>
                             </a>
                         </li>
                         <li id="tour-equipments">
-                            <a class="waves-effect waves-dark" asp-area="" asp-controller="Equipments" asp-action="Index" aria-expanded="false">
-                                <i class="fa fa-truck"></i><span class="hide-menu"></span>Equipments
+                            <a class="waves-effect waves-dark" asp-area="" asp-controller="SiemensTags" asp-action="Index" aria-expanded="false">
+                                <i class="fa fa-tags"></i><span class="hide-menu"></span>Connection Tags
                             </a>
                         </li>
-                        <li hidden>
-                            <a class="waves-effect waves-dark" asp-area="" asp-controller="Audits" asp-action="Index" aria-expanded="false">
-                                <i class="fa fa-tasks"></i><span class="hide-menu"></span>Audits
+
+                        <li id="tour-data-modeling">
+                            <a class="waves-effect waves-dark" asp-area="" asp-controller="Models" asp-action="Index" aria-expanded="false">
+                                <i class="fa fa-code"></i><span class="hide-menu"></span>Data modeling
                             </a>
                         </li>
-                        <li hidden>
-                            <a class="waves-effect waves-dark" asp-area="" asp-controller="Tenants" asp-action="Index" aria-expanded="false">
-                                <i class="fa fa-building"></i><span class="hide-menu">Tenants</span>
+
+                        <li id="tour-models">
+                            <a class="waves-effect waves-dark" asp-area="" asp-controller="Models" asp-action="Index" aria-expanded="false">
+                                <i class="fa fa-cubes"></i><span class="hide-menu"></span>Models
                             </a>
                         </li>
-                        <li id="tour-locations">
-                            <a class="waves-effect waves-dark" asp-area="" asp-controller="Locations" asp-action="Index" aria-expanded="false">
-                                <i class="fa fa-map-marker"></i><span class="hide-menu"></span>Locations
+
+                        <li id="tour-output">
+                            <a class="waves-effect waves-dark" asp-area="" asp-controller="Output" asp-action="Index" aria-expanded="false">
+                                <i class="fa fa-cloud-upload"></i><span class="hide-menu"></span>Output connectors
                             </a>
                         </li>
+
                         <li id="tour-users">
                             <a class="waves-effect waves-dark" asp-area="" asp-controller="TenantUsers" asp-action="Index" aria-expanded="false">
-                                <i class="fa fa-users"></i><span class="hide-menu">Tenant Users</span>
+                                <i class="fa fa-users"></i><span class="hide-menu">User management</span>
                             </a>
                         </li>
-                        <li id="tour-locationcontacts">
-                            <a class="waves-effect waves-dark" asp-area="" asp-controller="LocationContacts" asp-action="Index" aria-expanded="false">
-                                <i class="fa fa-address-book"></i><span class="hide-menu"></span>Location Contacts
-                            </a>
-                        </li>
-                        <li id="tour-whitelist">
-                            <a class="waves-effect waves-dark" asp-area="" asp-controller="TenantWhiteLists" asp-action="Index" aria-expanded="false">
-                                <i class="fa fa-user-secret"></i><span class="hide-menu"></span>Tenant Whitelist
-                            </a>
-                        </li>
-                        <li id="tour-limits">
-                            <a class="waves-effect waves-dark" asp-area="" asp-controller="Home" asp-action="Limits" aria-expanded="false">
-                                <i class="fa fa-cog"></i><span class="hide-menu"></span>Limits
-                            </a>
-                        </li>
+
                         <li>
                             <a class="waves-effect waves-dark" asp-controller="Home" asp-action="Help" aria-expanded="false">
                                 <i class="fa fa-question-circle"></i><span class="hide-menu"></span>Help
                             </a>
                         </li>
-                        <li hidden>
-                            <a class="waves-effect waves-dark" asp-area="" asp-controller="QuestionTypes" asp-action="Index" aria-expanded="false">
-                                <i class="fa fa-cogs"></i><span class="hide-menu"></span>Question Types
-                            </a>
-                        </li>
-                        <li hidden>
-                            <a class="waves-effect waves-dark" asp-area="" asp-controller="Questions" asp-action="Index" aria-expanded="false">
-                                <i class="fa fa-cogs"></i><span class="hide-menu"></span>Questions
-                            </a>
-                        </li>
-                        <li hidden>
-                            <a class="waves-effect waves-dark" asp-area="" asp-controller="QuestionGroups" asp-action="Index" aria-expanded="false">
-                                <i class="fa fa-cogs"></i><span class="hide-menu"></span>Question Groups
-                            </a>
-                        </li>
-                        <li hidden>
-                            <a class="waves-effect waves-dark" asp-area="" asp-controller="QuestionGroupQuestions" asp-action="Index" aria-expanded="false">
-                                <i class="fa fa-cogs"></i><span class="hide-menu"></span>Question Group Questions
-                            </a>
-                        </li>
-                        <li hidden>
-                            <a class="waves-effect waves-dark" asp-area="" asp-controller="AuditQuestionGroups" asp-action="Index" aria-expanded="false">
-                                <i class="fa fa-cogs"></i><span class="hide-menu"></span>Audit Question Groups
-                            </a>
-                        </li>
+
                     </ul>
                 </nav>
                 <!-- End Sidebar navigation -->

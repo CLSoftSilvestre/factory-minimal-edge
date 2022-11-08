@@ -1,5 +1,6 @@
 ﻿using System;
 using S7.Net;
+using System.Threading;
 
 namespace factory_minimal_edge_plc_connector
 {
@@ -7,11 +8,26 @@ namespace factory_minimal_edge_plc_connector
     {
         static void Main(string[] args)
         {
-            Plc plc = new Plc(CpuType.Logo0BA8, "127.0.0.1", 0, 2);
-            //plc.Open();
+            using (var plc = new Plc(CpuType.S71200, "169.254.190.100", 0, 0))
+            {
+                //IP is available
+                plc.Open();
 
-            Console.WriteLine("Hello World!");
-            //plc.Close();
+                if (plc.IsConnected)
+                {
+                    Console.WriteLine("Connected -> " + plc.IsConnected);
+                    bool varm07 = false;
+                    for (var x = 0; x < 10; x++)
+                    {
+                        Thread.Sleep(1000);
+                        varm07 = (bool)plc.Read("M0.7");
+                        Console.WriteLine(x + " - Variavel M0.7 - " + varm07);
+                    }
+
+                    Console.WriteLine("End of read plc Tag");
+                }
+                
+            }
         }
     }
 }

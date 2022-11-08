@@ -17,6 +17,7 @@ using System.Globalization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Identity.Web.UI;
+using factory_minimal_edge_ui.Hubs;
 
 namespace factory_minimal_edge_ui
 {
@@ -38,6 +39,8 @@ namespace factory_minimal_edge_ui
 
             services.AddRazorPages()
                 .AddMicrosoftIdentityUI();
+
+            services.AddSignalR();
 
 
             services.Configure<RequestLocalizationOptions>(options =>
@@ -166,7 +169,10 @@ namespace factory_minimal_edge_ui
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
+                endpoints.MapHub<TagsHub>("/tagsHub");
             });
         }
     }
 }
+
+// https://learn.microsoft.com/en-us/aspnet/core/tutorials/signalr?view=aspnetcore-5.0&tabs=visual-studio
