@@ -30,9 +30,6 @@
             <th>
                 @Html.DisplayNameFor(model => model.Slot)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Connected)
-            </th>
             <th></th>
         </tr>
     </thead>
@@ -58,12 +55,7 @@
                 @Html.DisplayFor(modelItem => item.Slot)
             </td>
             <td>
-                @item.IsConnected()
-            </td>
-            <td>
                 <div class="btn-group" role="group" aria-label="Action commands">
-                    <a type="button" class="btn btn-secondary" asp-action="Connect" asp-route-id="@item.Id"><i class="fa fa-plug"></i></a>
-                    <a type="button" class="btn btn-warning" asp-action="Disconnect" asp-route-id="@item.Id"><i class="fa fa-power-off"></i></a>
                     <a type="button" class="btn btn-secondary" asp-action="Edit" asp-route-id="@item.Id"><i class="fa fa-edit"></i></a>
                     <a type="button" class="btn btn-secondary" asp-action="Details" asp-route-id="@item.Id"><i class="fa fa-info-circle"></i></a>
                     <a type="button" class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id"><i class="fa fa-trash"></i></a>

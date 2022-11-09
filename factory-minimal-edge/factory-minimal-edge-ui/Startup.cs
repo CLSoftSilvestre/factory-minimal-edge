@@ -18,6 +18,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Identity.Web.UI;
 using factory_minimal_edge_ui.Hubs;
+using factory_minimal_edge_ui.Services;
+using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace factory_minimal_edge_ui
 {
@@ -42,6 +45,10 @@ namespace factory_minimal_edge_ui
 
             services.AddSignalR();
 
+            services.AddControllers().AddNewtonsoftJson(options => {
+                options.SerializerSettings.ContractResolver = new Newtonsoft.Json.Serialization.DefaultContractResolver();
+                options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+            });
 
             services.Configure<RequestLocalizationOptions>(options =>
             {
@@ -134,6 +141,9 @@ namespace factory_minimal_edge_ui
             services.AddMvc().AddSessionStateTempDataProvider();
             services.AddSession();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Latest);
+
+            // Add services for tag values update
+            services.AddHostedService<CycleBackgroundService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

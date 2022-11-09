@@ -16,39 +16,9 @@ namespace factory_minimal_edge_ui.Hubs
             await Clients.All.SendAsync("ReceivedMessage", user, message);
         }
 
-        public async IAsyncEnumerable<SiemensTag> Streaming(CancellationToken cancellationToken)
+        public async Task UpdatedTagValue(string tagId, string tagName, string tagValue)
         {
-            bool varm07 = false;
-
-            // Read variable of PLC and send via SinalR
-            using (var plc = new Plc(CpuType.S71200, "169.254.190.100", 0, 0))
-            {
-                //Open connection with PLC
-                plc.Open();
-
-                while (true)
-                {
-                    if (plc.IsConnected)
-                    {
-                        
-                        varm07 = (bool)plc.Read("M0.7");
-
-                        // Create Siemens Tag
-                        SiemensTag tag = new SiemensTag();
-                        tag.Name = "Tag de Teste";
-                        tag.Type = VarType.Bit;
-                        tag.Value = varm07;
-
-                        await Clients.All.SendAsync("UpdatedTag", tag);
-
-                        Console.WriteLine(tag.Value);
-
-                        yield return tag;
-                        await Task.Delay(1000, cancellationToken);
-                    }
-                }     
-            }
-
+            await Clients.All.SendAsync("UpdatedTagValue", tagId, tagName, tagValue);
         }
     }
 }

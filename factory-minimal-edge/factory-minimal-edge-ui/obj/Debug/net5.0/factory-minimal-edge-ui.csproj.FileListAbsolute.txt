@@ -199,3 +199,16 @@ C:\Users\CSilvestre\GitLab\factory-minimal-edge\factory-minimal-edge\factory-min
 C:\Users\CSilvestre\GitLab\factory-minimal-edge\factory-minimal-edge\factory-minimal-edge-ui\obj\Debug\net5.0\Razor\Views\SiemensTags\Edit.cshtml.g.cs
 C:\Users\CSilvestre\GitLab\factory-minimal-edge\factory-minimal-edge\factory-minimal-edge-ui\obj\Debug\net5.0\Razor\Views\SiemensTags\Index.cshtml.g.cs
 C:\Users\CSilvestre\GitLab\factory-minimal-edge\factory-minimal-edge\factory-minimal-edge-ui\bin\Debug\net5.0\libman.json
+C:\Users\CSilvestre\GitLab\factory-minimal-edge\factory-minimal-edge\factory-minimal-edge-ui\bin\Debug\net5.0\Microsoft.AspNetCore.Connections.Abstractions.dll
+C:\Users\CSilvestre\GitLab\factory-minimal-edge\factory-minimal-edge\factory-minimal-edge-ui\bin\Debug\net5.0\Microsoft.AspNetCore.Http.Connections.Client.dll
+C:\Users\CSilvestre\GitLab\factory-minimal-edge\factory-minimal-edge\factory-minimal-edge-ui\bin\Debug\net5.0\Microsoft.AspNetCore.Http.Connections.Common.dll
+C:\Users\CSilvestre\GitLab\factory-minimal-edge\factory-minimal-edge\factory-minimal-edge-ui\bin\Debug\net5.0\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\CSilvestre\GitLab\factory-minimal-edge\factory-minimal-edge\factory-minimal-edge-ui\bin\Debug\net5.0\Microsoft.AspNetCore.SignalR.Client.dll
+C:\Users\CSilvestre\GitLab\factory-minimal-edge\factory-minimal-edge\factory-minimal-edge-ui\bin\Debug\net5.0\Microsoft.AspNetCore.SignalR.Client.Core.dll
+C:\Users\CSilvestre\GitLab\factory-minimal-edge\factory-minimal-edge\factory-minimal-edge-ui\bin\Debug\net5.0\Microsoft.AspNetCore.SignalR.Common.dll
+C:\Users\CSilvestre\GitLab\factory-minimal-edge\factory-minimal-edge\factory-minimal-edge-ui\bin\Debug\net5.0\Microsoft.AspNetCore.SignalR.Protocols.Json.dll
+C:\Users\CSilvestre\GitLab\factory-minimal-edge\factory-minimal-edge\factory-minimal-edge-ui\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+C:\Users\CSilvestre\GitLab\factory-minimal-edge\factory-minimal-edge\factory-minimal-edge-ui\bin\Debug\net5.0\System.IO.Pipelines.dll
+C:\Users\CSilvestre\GitLab\factory-minimal-edge\factory-minimal-edge\factory-minimal-edge-ui\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\CSilvestre\GitLab\factory-minimal-edge\factory-minimal-edge\factory-minimal-edge-ui\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\CSilvestre\GitLab\factory-minimal-edge\factory-minimal-edge\factory-minimal-edge-ui\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll

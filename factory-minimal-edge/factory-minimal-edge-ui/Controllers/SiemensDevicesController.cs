@@ -159,44 +159,6 @@ namespace factory_minimal_edge_ui.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        // GET: SiemensDevices/Connect/5
-        public async Task<IActionResult> Connect(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var siemensDevice = await _context.SiemensDevices.FindAsync(id);
-            if (siemensDevice == null)
-            {
-                return NotFound();
-            }
-
-            bool connectStatus = siemensDevice.Connect();
-
-            return RedirectToAction(nameof(Index));
-        }
-
-        // GET: SiemensDevices/Connect/5
-        public async Task<IActionResult> Disconnect(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var siemensDevice = await _context.SiemensDevices.FindAsync(id);
-            if (siemensDevice == null)
-            {
-                return NotFound();
-            }
-
-            bool connectStatus = siemensDevice.Disconnect();
-
-            return RedirectToAction(nameof(Index));
-        }
-
         private bool SiemensDeviceExists(int id)
         {
             return _context.SiemensDevices.Any(e => e.Id == id);

@@ -23,19 +23,6 @@ namespace factory_minimal_edge_models
         [NotMapped]
         public object Value {get; set;}
 
-        public async Task<bool> UpdateTagValue()
-        {
-            var tagValue = await Device.GetDriver().ReadAsync(Address);
-            Value = tagValue;
-
-            if(tagValue != null)
-            {
-                return true;
-            } else
-            {
-                return false;
-            }
-        }
     }
 
 }

@@ -2,16 +2,17 @@
 
 var connection = new signalR.HubConnectionBuilder().withUrl("/tagsHub").build();
 
-//Disable send button until connection is established
-//document.getElementById("sendButton").disabled = true;
-
-connection.on("UpdatedTag", function (tag) {
-    console.log(tag.Value);
+connection.on("UpdatedTagValue", function (tagId, tagName, tagValue) {
+    console.log(tagId + " - " + tagName + " - " + tagValue);
+    updateTagField(tagId, tagName, tagValue);
 });
 
 connection.start().then(function () {
-    //document.getElementById("sendButton").disabled = false;
-    console.log("Teste");
+    console.log("ConnectionStarted");
 }).catch(function (err) {
     return console.error(err.toString());
 });
+
+function updateTagField(tagId, tagName, tagValue) {
+    document.getElementById(tagName).innerHTML = tagValue;
+}
