@@ -12,7 +12,9 @@ namespace factory_minimal_edge_models
     public class SiemensTag
     {
         public int Id { get; set; }
+        [Display(Name = "Tag name")]
         public string Name { get; set; }
+        [Display(Name = "Controller")]
         public int DeviceId { get; set; }
         [Display(Name = "Controller")]
         public virtual SiemensDevice Device { get; set; }
