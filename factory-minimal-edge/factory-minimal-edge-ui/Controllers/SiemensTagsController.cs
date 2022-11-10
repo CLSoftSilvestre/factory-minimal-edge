@@ -88,6 +88,12 @@ namespace factory_minimal_edge_ui.Controllers
             {
                 return NotFound();
             }
+
+            var VariableTypes = from VarType i in Enum.GetValues(typeof(VarType))
+                                select new { Id = (int)i, Name = i.ToString() };
+
+            ViewData["VariableTypes"] = new SelectList(VariableTypes, "Id", "Name");
+
             ViewData["DeviceId"] = new SelectList(_context.SiemensDevices, "Id", "Name", siemensTag.DeviceId);
             return View(siemensTag);
         }

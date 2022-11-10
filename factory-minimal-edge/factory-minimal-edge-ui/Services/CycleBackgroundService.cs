@@ -7,6 +7,7 @@ using factory_minimal_edge_ui.Data;
 using Microsoft.EntityFrameworkCore;
 using S7.Net;
 using Microsoft.AspNetCore.SignalR.Client;
+using System.Linq;
 
 namespace factory_minimal_edge_ui.Services
 {
@@ -40,7 +41,7 @@ namespace factory_minimal_edge_ui.Services
             using(var scope = _scopeFactory.CreateScope())
             {
                 var _context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
-                var connections = await _context.SiemensDevices.Include(a => a.Tags).ToListAsync();
+                var connections = await _context.SiemensDevices.Where(e => e.Active == true).Include(a => a.Tags).ToListAsync();
 
                 while (!cancellationToken.IsCancellationRequested)
                 {
@@ -55,11 +56,11 @@ namespace factory_minimal_edge_ui.Services
                                 foreach (var v in con.Tags)
                                 {
                                     v.Value = plc.Read(v.Address);
-                                    Console.WriteLine($"{DateTime.Now} | PLC -> {con.Name} : Tag -> {v.Name} : Value - {v.Value}");
+                                    //Console.WriteLine($"{DateTime.Now} | PLC -> {con.Name} : Tag -> {v.Name} : Value - {v.Value}");
 
                                     try
                                     {
-                                        await connection.InvokeAsync("UpdatedTagValue",v.Id.ToString() ,v.Name, v.Value.ToString());
+                                        await connection.InvokeAsync("UpdatedTagValue",v.Id.ToString() ,v.Name, ConvertPLCData(v.Type, v.Value));
                                     }
                                     catch (Exception ex)
                                     {
@@ -69,9 +70,26 @@ namespace factory_minimal_edge_ui.Services
                             }
                         }
                     }
-                    await Task.Delay(5000);
+                    await Task.Delay(1000);
                 }
             }
-        }   
+        } 
+        
+        private string ConvertPLCData(VarType type, Object value)
+        {
+            switch (type)
+            {
+                case VarType.Bit:
+                    return value.ToString();
+                case VarType.Int:
+                    return value.ToString();
+                case VarType.Real:
+                    var dword = (uint)value;
+                    float result = dword.ConvertToFloat();
+                    return result.ToString();
+                default:
+                    return value.ToString();
+            }
+        }
     }
 }

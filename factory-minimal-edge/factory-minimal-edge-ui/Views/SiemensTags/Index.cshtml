@@ -1,15 +1,28 @@
 ﻿@model IEnumerable<factory_minimal_edge_models.SiemensTag>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Tags list";
 }
 
-<h1>Index</h1>
+<div class="row page-titles">
+    <div class="col-md-5 align-self-center">
+        <h4 class="text-themecolor">Tags page</h4>
+    </div>
+    <div class="col-md-7 align-self-center text-right">
+        <div class="d-flex justify-content-end align-items-center">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="javascript:void(0)">Connections</a></li>
+                <li class="breadcrumb-item active">Tags</li>
+            </ol>
+        </div>
+    </div>
+</div>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a type="button" class="btn btn-primary" style="margin:10px" asp-action="Create"><i class="fa fa-plus"></i> Create new tag</a>
 </p>
-<table class="table">
+
+<table class="table table-responsive-md">
     <thead>
         <tr>
             <th>
@@ -50,16 +63,16 @@
                     
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    <div class="btn-group" role="group" aria-label="Action commands">
+                        <a type="button" class="btn btn-secondary" asp-action="Edit" asp-route-id="@item.Id"><i class="fa fa-edit"></i></a>
+                        <a type="button" class="btn btn-secondary" asp-action="Details" asp-route-id="@item.Id"><i class="fa fa-info-circle"></i></a>
+                        <a type="button" class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id"><i class="fa fa-trash"></i></a>
+                    </div>
                 </td>
             </tr>
         }
     </tbody>
 </table>
-
-<div id="messagesList"></div>
 
 <script src="~/js/signalr/dist/browser/signalr.js"></script>
 <script src="~/js/tags.js"></script>

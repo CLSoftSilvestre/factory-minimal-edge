@@ -26,26 +26,9 @@ namespace factory_minimal_edge_models
         public string IP_Address { get; set; }
         public short Rack { get; set; }
         public short Slot { get; set; }
+        public bool Active { get; set; }
 
         public virtual ICollection<SiemensTag> Tags { get; set; }
-
-        [NotMapped]
-        private Plc plc;
-
-        [NotMapped]
-        public bool Connected { get; set; } = false;
-
-        public bool CreateDriver()
-        {
-            plc = new Plc(Type, IP_Address, Rack, Slot);
-
-            if (plc != null)
-            {
-                Console.WriteLine("Created driver for PLC " + Name + "!");
-                return true;
-            }
-            return false;
-        }
 
     }
 }

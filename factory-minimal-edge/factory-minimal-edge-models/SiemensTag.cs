@@ -14,6 +14,7 @@ namespace factory_minimal_edge_models
         public int Id { get; set; }
         public string Name { get; set; }
         public int DeviceId { get; set; }
+        [Display(Name = "Controller")]
         public virtual SiemensDevice Device { get; set; }
 
         [Display(Name = "Variable type")]

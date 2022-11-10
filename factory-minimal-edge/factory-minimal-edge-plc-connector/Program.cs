@@ -16,12 +16,13 @@ namespace factory_minimal_edge_plc_connector
                 if (plc.IsConnected)
                 {
                     Console.WriteLine("Connected -> " + plc.IsConnected);
-                    bool varm07 = false;
+
                     for (var x = 0; x < 10; x++)
                     {
                         Thread.Sleep(1000);
-                        varm07 = (bool)plc.Read("M0.7");
-                        Console.WriteLine(x + " - Variavel M0.7 - " + varm07);
+                        var dword = (uint)plc.Read("DB1.DBD2");
+                        float result = dword.ConvertToFloat();
+                        Console.WriteLine(x + " - Variavel DB1.DBD2 - " + result);
                     }
 
                     Console.WriteLine("End of read plc Tag");
