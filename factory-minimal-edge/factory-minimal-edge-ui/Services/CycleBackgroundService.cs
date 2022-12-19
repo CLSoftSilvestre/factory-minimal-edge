@@ -15,11 +15,13 @@ namespace factory_minimal_edge_ui.Services
     public class CycleBackgroundService : BackgroundService
     {
         private readonly IServiceScopeFactory _scopeFactory;
+        private readonly TemporaryDataService _temporaryData;
         HubConnection connection;
 
-        public CycleBackgroundService(IServiceScopeFactory scopeFactory)
+        public CycleBackgroundService(IServiceScopeFactory scopeFactory, TemporaryDataService temporaryData)
         {
             _scopeFactory = scopeFactory;
+            _temporaryData = temporaryData;
 
             connection = new HubConnectionBuilder()
                 .WithUrl("https://localhost:44313/tagsHub")
@@ -58,8 +60,13 @@ namespace factory_minimal_edge_ui.Services
                                     v.Value = plc.Read(v.Address);
                                     //Console.WriteLine($"{DateTime.Now} | PLC -> {con.Name} : Tag -> {v.Name} : Value - {v.Value}");
 
+                                    // Save data into temporary data
+                                    string _varName = con.Name + "/" + v.Name;
+                                    _temporaryData.UpdateVariableValue(_varName, v.Value);
+
                                     try
                                     {
+                                        // Send data to client via SignalR
                                         await connection.InvokeAsync("UpdatedTagValue",v.Id.ToString() ,v.Name, ConvertPLCData(v.Type, v.Value));
                                     }
                                     catch (Exception ex)

@@ -18,5 +18,7 @@ namespace factory_minimal_edge_ui.Data
 
         public DbSet<SiemensTag> SiemensTags { get; set; }
 
+        public DbSet<OPC_UA_Device> OPC_UA_Devices { get; set; }
+
     }
 }

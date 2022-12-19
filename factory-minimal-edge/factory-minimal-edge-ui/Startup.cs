@@ -144,6 +144,8 @@ namespace factory_minimal_edge_ui
 
             // Add services for tag values update
             services.AddHostedService<CycleBackgroundService>();
+
+            services.AddSingleton<TemporaryDataService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
