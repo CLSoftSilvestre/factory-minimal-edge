@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using factory_minimal_edge_ui.Services;
 
 namespace factory_minimal_edge_ui.Controllers
 {
@@ -18,11 +19,13 @@ namespace factory_minimal_edge_ui.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly IStringLocalizer<HomeController> _stringLocalizer;
+        private readonly TemporaryDataService _tempData;
 
-        public HomeController(ILogger<HomeController> logger, IStringLocalizer<HomeController> stringLocalizer)
+        public HomeController(ILogger<HomeController> logger, IStringLocalizer<HomeController> stringLocalizer, TemporaryDataService tempData)
         {
             _logger = logger;
             _stringLocalizer = stringLocalizer;
+            _tempData = tempData;
         }
 
         public IActionResult Index()
@@ -33,6 +36,13 @@ namespace factory_minimal_edge_ui.Controllers
         public IActionResult Privacy()
         {
             return View();
+        }
+
+        public IActionResult InternalTags()
+        {
+            var listobjects = _tempData.GetVariablesList();
+            Console.WriteLine(listobjects);
+            return View(listobjects);
         }
 
         [HttpPost]

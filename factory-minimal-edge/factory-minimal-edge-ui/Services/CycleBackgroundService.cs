@@ -61,8 +61,7 @@ namespace factory_minimal_edge_ui.Services
                                     //Console.WriteLine($"{DateTime.Now} | PLC -> {con.Name} : Tag -> {v.Name} : Value - {v.Value}");
 
                                     // Save data into temporary data
-                                    string _varName = con.Name + "/" + v.Name;
-                                    _temporaryData.UpdateVariableValue(_varName, v.Value);
+                                    _temporaryData.UpdateVariableValue(con.Name, v.Name, ConvertPLCData(v.Type, v.Value), v.Type);
 
                                     try
                                     {

@@ -1,64 +1,65 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using factory_minimal_edge_ui.Models;
 
 namespace factory_minimal_edge_ui.Services
 {
-    public class TemporaryDataVariable
-    {
-        public string VariableName { get; set; }
-        public object VariableValue { get; set; }
-
-        public TemporaryDataVariable(string VarName)
-        {
-            VariableName = VarName;
-        }
-
-        public TemporaryDataVariable(string VarName, object VarValue)
-        {
-            VariableName = VarName;
-            VariableValue = VarValue;
-        }
-    }
-
     public class TemporaryDataService
     {
-        private List<TemporaryDataVariable> Variables;
+        private List<Tag> Variables;
 
         public TemporaryDataService()
         {
-            Variables = new List<TemporaryDataVariable>();
+            Variables = new List<Tag>();
         }
 
         public void AddVariable(string VarName)
         {
-            TemporaryDataVariable _tempVar = new TemporaryDataVariable(VarName);
+            Tag _tempVar = new Tag(VarName);
             Variables.Add(_tempVar);
         }
 
         public void AddVariable(string VarName, object VarValue)
         {
-            TemporaryDataVariable _tempVar = new TemporaryDataVariable(VarName, VarValue);
+            Tag _tempVar = new Tag(VarName, VarValue);
+            Variables.Add(_tempVar);
+        }
+        public void AddVariable(string VarSource, string VarName, object VarValue)
+        {
+            Tag _tempVar = new Tag(VarSource, VarName, VarValue);
             Variables.Add(_tempVar);
         }
 
-        public void UpdateVariableValue(string VarName, object VarValue)
+        public void AddVariable(string VarSource, string VarName, object VarValue, object VarDataType)
         {
-            TemporaryDataVariable tmpVar = Variables.Where(i => i.VariableName == VarName).FirstOrDefault();
+            Tag _tempVar = new Tag(VarSource, VarName, VarValue, VarDataType);
+            Variables.Add(_tempVar);
+        }
+
+        public void UpdateVariableValue(string VarSource, string VarName, object VarValue, object VarDataType)
+        {
+            Tag tmpVar = Variables.Where(i => i.TagName == VarName).FirstOrDefault();
 
             if (tmpVar == null)
             {
-                AddVariable(VarName, VarValue);
+                AddVariable(VarSource, VarName, VarValue, VarDataType);
             } else
             {
-                tmpVar.VariableValue = VarValue;
+                tmpVar.UpdateTagValue(VarValue);
+                tmpVar.TagValueDateTime = DateTime.Now;
             }
         }
 
         public object GetVariableValue(string VarName)
         {
-            TemporaryDataVariable tmpVar = Variables.Where(i => i.VariableName == VarName).FirstOrDefault();
-            return tmpVar.VariableValue;
+            Tag tmpVar = Variables.Where(i => i.TagName == VarName).FirstOrDefault();
+            return tmpVar.TagValue;
+        }
+
+        public List<Tag> GetVariablesList()
+        {
+            return Variables;
         }
 
     }

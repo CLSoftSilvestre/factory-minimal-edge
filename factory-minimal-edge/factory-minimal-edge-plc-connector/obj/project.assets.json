@@ -1913,24 +1913,26 @@
     ]
   },
   "packageFolders": {
-    "/Users/celsosilvestre/.nuget/packages/": {}
+    "C:\\Users\\CSilvestre\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/celsosilvestre/Documents/factory-minimal-edge/factory-minimal-edge/factory-minimal-edge-plc-connector/factory-minimal-edge-plc-connector.csproj",
+      "projectUniqueName": "C:\\Users\\CSilvestre\\GitLab\\factory-minimal-edge\\factory-minimal-edge\\factory-minimal-edge-plc-connector\\factory-minimal-edge-plc-connector.csproj",
       "projectName": "factory-minimal-edge-plc-connector",
-      "projectPath": "/Users/celsosilvestre/Documents/factory-minimal-edge/factory-minimal-edge/factory-minimal-edge-plc-connector/factory-minimal-edge-plc-connector.csproj",
-      "packagesPath": "/Users/celsosilvestre/.nuget/packages/",
-      "outputPath": "/Users/celsosilvestre/Documents/factory-minimal-edge/factory-minimal-edge/factory-minimal-edge-plc-connector/obj/",
+      "projectPath": "C:\\Users\\CSilvestre\\GitLab\\factory-minimal-edge\\factory-minimal-edge\\factory-minimal-edge-plc-connector\\factory-minimal-edge-plc-connector.csproj",
+      "packagesPath": "C:\\Users\\CSilvestre\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\CSilvestre\\GitLab\\factory-minimal-edge\\factory-minimal-edge\\factory-minimal-edge-plc-connector\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/celsosilvestre/.config/NuGet/NuGet.Config"
+        "C:\\Users\\CSilvestre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1973,7 +1975,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.408/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
       }
     }
   }

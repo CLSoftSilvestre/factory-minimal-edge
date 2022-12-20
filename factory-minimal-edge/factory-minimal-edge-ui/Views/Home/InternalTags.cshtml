@@ -1,0 +1,65 @@
+﻿@model IEnumerable<factory_minimal_edge_ui.Models.Tag>
+
+@{
+    ViewData["Title"] = "Internal Tags";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>Use this page to detail your site's privacy policy.</p>
+
+<table class="table table-responsive-md">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TagSource)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TagName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TagPath)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TagValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TagValueDateTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CalculatedTag)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TagSource)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TagName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TagPath)
+            </td>
+            <td>
+                @item.DataType
+            </td>
+            <td>
+                @item.TagValue
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TagValueDateTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CalculatedTag)
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
