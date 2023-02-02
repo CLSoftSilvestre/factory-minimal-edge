@@ -20,5 +20,9 @@ namespace factory_minimal_edge_ui.Data
 
         public DbSet<OPC_UA_Device> OPC_UA_Devices { get; set; }
 
+        public DbSet<MQTT_Broker> Brokers { get; set; }
+
+        public DbSet<MQTT_Topic> Topics { get; set; }
+
     }
 }

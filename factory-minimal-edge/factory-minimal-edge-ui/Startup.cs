@@ -21,6 +21,8 @@ using factory_minimal_edge_ui.Hubs;
 using factory_minimal_edge_ui.Services;
 using System.Text.Json.Serialization;
 using Newtonsoft.Json;
+using MQTTnet.Server;
+using MQTTnet;
 
 namespace factory_minimal_edge_ui
 {
@@ -146,6 +148,7 @@ namespace factory_minimal_edge_ui
             services.AddHostedService<CycleBackgroundService>();
 
             services.AddSingleton<TemporaryDataService>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -183,8 +186,11 @@ namespace factory_minimal_edge_ui
                 endpoints.MapRazorPages();
                 endpoints.MapHub<TagsHub>("/tagsHub");
             });
+
         }
     }
 }
 
 // https://learn.microsoft.com/en-us/aspnet/core/tutorials/signalr?view=aspnetcore-5.0&tabs=visual-studio
+
+// https://blog.behroozbc.ir/basic-mqtt-broker-with-c-sharp
