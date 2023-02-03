@@ -48,7 +48,7 @@ namespace factory_minimal_edge_ui.Controllers
         // GET: MQTT_Topics/Create
         public IActionResult Create()
         {
-            ViewData["BrokerId"] = new SelectList(_context.Brokers, "Id", "Id");
+            ViewData["BrokerId"] = new SelectList(_context.Brokers, "Id", "Name");
             return View();
         }
 
@@ -65,7 +65,7 @@ namespace factory_minimal_edge_ui.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["BrokerId"] = new SelectList(_context.Brokers, "Id", "Id", mQTT_Topic.BrokerId);
+            ViewData["BrokerId"] = new SelectList(_context.Brokers, "Id", "Name", mQTT_Topic.BrokerId);
             return View(mQTT_Topic);
         }
 
@@ -82,7 +82,7 @@ namespace factory_minimal_edge_ui.Controllers
             {
                 return NotFound();
             }
-            ViewData["BrokerId"] = new SelectList(_context.Brokers, "Id", "Id", mQTT_Topic.BrokerId);
+            ViewData["BrokerId"] = new SelectList(_context.Brokers, "Id", "Name", mQTT_Topic.BrokerId);
             return View(mQTT_Topic);
         }
 
@@ -118,7 +118,7 @@ namespace factory_minimal_edge_ui.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["BrokerId"] = new SelectList(_context.Brokers, "Id", "Id", mQTT_Topic.BrokerId);
+            ViewData["BrokerId"] = new SelectList(_context.Brokers, "Id", "Name", mQTT_Topic.BrokerId);
             return View(mQTT_Topic);
         }
 
