@@ -400,6 +400,47 @@
           "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {}
         }
       },
+      "Microsoft.ClearScript.Core/7.3.7": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/ClearScript.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/ClearScript.Core.dll": {}
+        }
+      },
+      "Microsoft.ClearScript.V8/7.3.7": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.ClearScript.Core": "7.3.7",
+          "Microsoft.ClearScript.V8.ICUData": "7.3.7",
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "compile": {
+          "lib/net5.0/ClearScript.V8.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/ClearScript.V8.dll": {}
+        }
+      },
+      "Microsoft.ClearScript.V8.ICUData/7.3.7": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/ClearScript.V8.ICUData.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/ClearScript.V8.ICUData.dll": {}
+        }
+      },
+      "Microsoft.ClearScript.V8.Native.osx-x64/7.3.7": {
+        "type": "package",
+        "runtimeTargets": {
+          "runtimes/osx-x64/native/ClearScriptV8.osx-x64.dylib": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          }
+        }
+      },
       "Microsoft.CodeAnalysis.Analyzers/3.0.0": {
         "type": "package",
         "build": {
@@ -3423,6 +3464,105 @@
         "ref/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "Microsoft.ClearScript.Core/7.3.7": {
+      "sha512": "Xw0JL3kEBJow9zYCstxUr/08SqLgNclf9zoljYxJUOP4F6T6iKbbwaJ7FmEzNYMGsxgJsiAOtNcTDOVRsvN39g==",
+      "type": "package",
+      "path": "microsoft.clearscript.core/7.3.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License.txt",
+        "images/ClearScript.png",
+        "lib/net45/ClearScript.Core.dll",
+        "lib/net45/ClearScript.Core.xml",
+        "lib/net471/ClearScript.Core.dll",
+        "lib/net471/ClearScript.Core.xml",
+        "lib/net5.0/ClearScript.Core.dll",
+        "lib/net5.0/ClearScript.Core.xml",
+        "lib/netcoreapp3.1/ClearScript.Core.dll",
+        "lib/netcoreapp3.1/ClearScript.Core.xml",
+        "lib/netstandard2.1/ClearScript.Core.dll",
+        "lib/netstandard2.1/ClearScript.Core.xml",
+        "lib/uap10.0/ClearScript.Core.dll",
+        "lib/uap10.0/ClearScript.Core.xml",
+        "licenses/ClearScript/License.txt",
+        "licenses/V8/LICENSE",
+        "licenses/V8/LICENSE.fdlibm",
+        "licenses/V8/LICENSE.strongtalk",
+        "licenses/V8/LICENSE.v8",
+        "microsoft.clearscript.core.7.3.7.nupkg.sha512",
+        "microsoft.clearscript.core.nuspec"
+      ]
+    },
+    "Microsoft.ClearScript.V8/7.3.7": {
+      "sha512": "QkEp3kUg22h8eQMnipC2KAvJTyLbgzttavRmryBg7W7NBHi4JbROk3AvtKIhxmJt6Oybz0Czz61N2SjcMrAbGg==",
+      "type": "package",
+      "path": "microsoft.clearscript.v8/7.3.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License.txt",
+        "images/ClearScript.png",
+        "lib/net45/ClearScript.V8.dll",
+        "lib/net45/ClearScript.V8.xml",
+        "lib/net471/ClearScript.V8.dll",
+        "lib/net471/ClearScript.V8.xml",
+        "lib/net5.0/ClearScript.V8.dll",
+        "lib/net5.0/ClearScript.V8.xml",
+        "lib/netcoreapp3.1/ClearScript.V8.dll",
+        "lib/netcoreapp3.1/ClearScript.V8.xml",
+        "lib/netstandard2.1/ClearScript.V8.dll",
+        "lib/netstandard2.1/ClearScript.V8.xml",
+        "lib/uap10.0/ClearScript.V8.dll",
+        "lib/uap10.0/ClearScript.V8.xml",
+        "licenses/ClearScript/License.txt",
+        "licenses/V8/LICENSE",
+        "licenses/V8/LICENSE.fdlibm",
+        "licenses/V8/LICENSE.strongtalk",
+        "licenses/V8/LICENSE.v8",
+        "microsoft.clearscript.v8.7.3.7.nupkg.sha512",
+        "microsoft.clearscript.v8.nuspec"
+      ]
+    },
+    "Microsoft.ClearScript.V8.ICUData/7.3.7": {
+      "sha512": "5aV5AWuXSaDzpVFSGRw92mqYs3PYxMpb4x0S1BLhQuexDvvBvLJSEbREr3AwfUVCkcaXQ6F/mS+s1c8ow3QMeg==",
+      "type": "package",
+      "path": "microsoft.clearscript.v8.icudata/7.3.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License.txt",
+        "images/ClearScript.png",
+        "lib/netstandard1.0/ClearScript.V8.ICUData.dll",
+        "lib/netstandard1.0/ClearScript.V8.ICUData.xml",
+        "licenses/ClearScript/License.txt",
+        "licenses/V8/LICENSE",
+        "licenses/V8/LICENSE.fdlibm",
+        "licenses/V8/LICENSE.strongtalk",
+        "licenses/V8/LICENSE.v8",
+        "microsoft.clearscript.v8.icudata.7.3.7.nupkg.sha512",
+        "microsoft.clearscript.v8.icudata.nuspec"
+      ]
+    },
+    "Microsoft.ClearScript.V8.Native.osx-x64/7.3.7": {
+      "sha512": "PvY/YBVctbpo4vCsD/7aH3uIhkUv1lFsoeNjDtGBxcMZb6gbsX83RPTI0VMaWDuciTXICm1H4/59q69W7r97jA==",
+      "type": "package",
+      "path": "microsoft.clearscript.v8.native.osx-x64/7.3.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License.txt",
+        "images/ClearScript.png",
+        "licenses/ClearScript/License.txt",
+        "licenses/V8/LICENSE",
+        "licenses/V8/LICENSE.fdlibm",
+        "licenses/V8/LICENSE.strongtalk",
+        "licenses/V8/LICENSE.v8",
+        "microsoft.clearscript.v8.native.osx-x64.7.3.7.nupkg.sha512",
+        "microsoft.clearscript.v8.native.osx-x64.nuspec",
+        "runtimes/osx-x64/native/ClearScriptV8.osx-x64.dylib"
       ]
     },
     "Microsoft.CodeAnalysis.Analyzers/3.0.0": {
@@ -8978,6 +9118,9 @@
       "Microsoft.AspNetCore.Identity.UI >= 5.0.17",
       "Microsoft.AspNetCore.Mvc.NewtonsoftJson >= 5.0.17",
       "Microsoft.AspNetCore.SignalR.Client >= 5.0.17",
+      "Microsoft.ClearScript.Core >= 7.3.7",
+      "Microsoft.ClearScript.V8 >= 7.3.7",
+      "Microsoft.ClearScript.V8.Native.osx-x64 >= 7.3.7",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.17",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.17",
       "Microsoft.Extensions.Localization >= 5.0.17",
@@ -8989,34 +9132,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\CSilvestre\\.nuget\\packages\\": {}
+    "/Users/celsosilvestre/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\CSilvestre\\GitLab\\factory-minimal-edge\\factory-minimal-edge\\factory-minimal-edge-ui\\factory-minimal-edge-ui.csproj",
+      "projectUniqueName": "/Users/celsosilvestre/Documents/factory-minimal-edge/factory-minimal-edge/factory-minimal-edge-ui/factory-minimal-edge-ui.csproj",
       "projectName": "factory-minimal-edge-ui",
-      "projectPath": "C:\\Users\\CSilvestre\\GitLab\\factory-minimal-edge\\factory-minimal-edge\\factory-minimal-edge-ui\\factory-minimal-edge-ui.csproj",
-      "packagesPath": "C:\\Users\\CSilvestre\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\CSilvestre\\GitLab\\factory-minimal-edge\\factory-minimal-edge\\factory-minimal-edge-ui\\obj\\",
+      "projectPath": "/Users/celsosilvestre/Documents/factory-minimal-edge/factory-minimal-edge/factory-minimal-edge-ui/factory-minimal-edge-ui.csproj",
+      "packagesPath": "/Users/celsosilvestre/.nuget/packages/",
+      "outputPath": "/Users/celsosilvestre/Documents/factory-minimal-edge/factory-minimal-edge/factory-minimal-edge-ui/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\CSilvestre\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/celsosilvestre/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\CSilvestre\\GitLab\\factory-minimal-edge\\factory-minimal-edge\\factory-minimal-edge-models\\factory-minimal-edge-models.csproj": {
-              "projectPath": "C:\\Users\\CSilvestre\\GitLab\\factory-minimal-edge\\factory-minimal-edge\\factory-minimal-edge-models\\factory-minimal-edge-models.csproj"
+            "/Users/celsosilvestre/Documents/factory-minimal-edge/factory-minimal-edge/factory-minimal-edge-models/factory-minimal-edge-models.csproj": {
+              "projectPath": "/Users/celsosilvestre/Documents/factory-minimal-edge/factory-minimal-edge/factory-minimal-edge-models/factory-minimal-edge-models.csproj"
             }
           }
         }
@@ -9054,6 +9195,18 @@
           "Microsoft.AspNetCore.SignalR.Client": {
             "target": "Package",
             "version": "[5.0.17, )"
+          },
+          "Microsoft.ClearScript.Core": {
+            "target": "Package",
+            "version": "[7.3.7, )"
+          },
+          "Microsoft.ClearScript.V8": {
+            "target": "Package",
+            "version": "[7.3.7, )"
+          },
+          "Microsoft.ClearScript.V8.Native.osx-x64": {
+            "target": "Package",
+            "version": "[7.3.7, )"
           },
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
@@ -9102,7 +9255,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.408/RuntimeIdentifierGraph.json"
       }
     }
   }

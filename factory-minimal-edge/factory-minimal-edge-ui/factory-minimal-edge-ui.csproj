@@ -21,10 +21,18 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
     <PackageReference Include="MQTTnet" Version="4.1.4.563" />
     <PackageReference Include="S7netplus" Version="0.14.0" />
+    <PackageReference Include="Microsoft.ClearScript.Core" Version="7.3.7" />
+    <PackageReference Include="Microsoft.ClearScript.V8" Version="7.3.7" />
+    <PackageReference Include="Microsoft.ClearScript.V8.Native.osx-x64" Version="7.3.7" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\factory-minimal-edge-models\factory-minimal-edge-models.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Microsoft.ClearScript.Core" />
+    <None Remove="Microsoft.ClearScript.V8" />
+    <None Remove="Microsoft.ClearScript.V8.Native.osx-x64" />
+  </ItemGroup>
 </Project>

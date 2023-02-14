@@ -147,6 +147,7 @@ namespace factory_minimal_edge_ui
             // Add services for tag values update
             services.AddHostedService<CycleBackgroundService>();
             services.AddHostedService<MqttClientService>();
+            // services.AddHostedService<TestScriptingService>();
 
             services.AddSingleton<TemporaryDataService>();
 

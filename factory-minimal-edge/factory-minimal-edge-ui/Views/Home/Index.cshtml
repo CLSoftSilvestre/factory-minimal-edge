@@ -2,7 +2,110 @@
     ViewData["Title"] = "Home Page";
 }
 
+<!--
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+-->
+
+<br />
+<br />
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-lg-3 text-center">
+            <div class="card" style="width: 12rem;">
+                <div class="card-body">
+                    <img class="card-img-top" src="~/assets/icons/protocols/opc-ua.svg" alt="Card image cap" height="80px">
+                    <h5 class="card-title">OPC-UA Server connector</h5>
+                    <p class="card-text">Connect to OPC-UA server and retrive the exposed data.</p>
+                    <a asp-area="" asp-controller="OPC_UA_Devices" asp-action="Index" class="btn btn-primary">View OPC-UA connections</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-3 text-center">
+            <div class="card" style="width: 12rem;">
+                <div class="card-body">
+                    <img class="card-img-top" src="~/assets/icons/protocols/Siemens.png" alt="Card image cap" height="80px">
+                    <h5 class="card-title">Siemens S7 connector</h5>
+                    <p class="card-text">Connect to Siemens PLCs and select the tags.</p>
+                    <a asp-area="" asp-controller="SiemensDevices" asp-action="Index" class="btn btn-primary">View Siemens connections</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-3 text-center">
+            <div class="card" style="width: 12rem;">
+                <div class="card-body">
+                    <img class="card-img-top" src="~/assets/icons/protocols/Mqtt.svg" alt="Card image cap" height="80px">
+                    <h5 class="card-title">MQTT broker connector</h5>
+                    <p class="card-text">Connect to MQTT broker and subscribe to selected topics.</p>
+                    <a asp-area="" asp-controller="MQTT_Brokers" asp-action="Index" class="btn btn-primary">View MQTT connections</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-sm-6 col-lg-3 text-center">
+            <div class="card" style="width: 12rem;">
+                <div class="card-body">
+                    <img class="card-img-top" src="~/assets/icons/protocols/Modbus.png" alt="Card image cap" height="80px">
+                    <h5 class="card-title">ModBus TCP connector</h5>
+                    <p class="card-text">Connect to Modbus TCP server and selected the registers.</p>
+                    <a asp-area="" asp-controller="MQTT_Brokers" asp-action="Index" class="btn btn-primary">View Modbus connections</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6 col-lg-3 text-center">
+            <div class="card" style="width: 12rem;">
+                <div class="card-body">
+                    <img class="card-img-top" src="~/assets/icons/protocols/opc-ua.svg" alt="Card image cap" height="80px">
+                    <h5 class="card-title">OPC-UA Server connector</h5>
+                    <p class="card-text">Connect to OPC-UA server and retrive the exposed data.</p>
+                    <a asp-area="" asp-controller="OPC_UA_Devices" asp-action="Index" class="btn btn-primary">View OPC-UA connections</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-3 text-center">
+            <div class="card" style="width: 12rem;">
+                <div class="card-body">
+                    <img class="card-img-top" src="~/assets/icons/protocols/Siemens.png" alt="Card image cap" height="80px">
+                    <h5 class="card-title">Siemens S7 connector</h5>
+                    <p class="card-text">Connect to Siemens PLCs and select the tags.</p>
+                    <a asp-area="" asp-controller="SiemensDevices" asp-action="Index" class="btn btn-primary">View Siemens connections</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-3 text-center">
+            <div class="card" style="width: 12rem;">
+                <div class="card-body">
+                    <img class="card-img-top" src="~/assets/icons/protocols/Mqtt.svg" alt="Card image cap" height="80px">
+                    <h5 class="card-title">MQTT broker connector</h5>
+                    <p class="card-text">Connect to MQTT broker and subscribe to selected topics.</p>
+                    <a asp-area="" asp-controller="MQTT_Brokers" asp-action="Index" class="btn btn-primary">View MQTT connections</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-sm-6 col-lg-3 text-center">
+            <div class="card" style="width: 12rem;">
+                <div class="card-body">
+                    <img class="card-img-top" src="~/assets/icons/protocols/Modbus.png" alt="Card image cap" height="80px">
+                    <h5 class="card-title">ModBus TCP connector</h5>
+                    <p class="card-text">Connect to Modbus TCP server and selected the registers.</p>
+                    <a asp-area="" asp-controller="MQTT_Brokers" asp-action="Index" class="btn btn-primary">View Modbus connections</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </div>
