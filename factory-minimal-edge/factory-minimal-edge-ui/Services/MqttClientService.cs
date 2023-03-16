@@ -77,6 +77,8 @@ namespace factory_minimal_edge_ui.Services
         private Task MqttClient_ApplicationMessageReceivedAsync(MqttApplicationMessageReceivedEventArgs arg)
         {
             Console.WriteLine("Topic: " + arg.ApplicationMessage.Topic + " - Value: " + Encoding.UTF8.GetString(arg.ApplicationMessage.Payload));
+            
+            // TODO: Update correspondent internal tag.
             return Task.CompletedTask;
         }
 

@@ -441,6 +441,30 @@
           }
         }
       },
+      "Microsoft.ClearScript.V8.Native.win-x64/7.3.7": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.ClearScript.V8.Native.win-x64.props": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win-x64/native/ClearScriptV8.win-x64.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          }
+        }
+      },
+      "Microsoft.ClearScript.V8.Native.win-x86/7.3.7": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.ClearScript.V8.Native.win-x86.props": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win-x86/native/ClearScriptV8.win-x86.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          }
+        }
+      },
       "Microsoft.CodeAnalysis.Analyzers/3.0.0": {
         "type": "package",
         "build": {
@@ -3563,6 +3587,52 @@
         "microsoft.clearscript.v8.native.osx-x64.7.3.7.nupkg.sha512",
         "microsoft.clearscript.v8.native.osx-x64.nuspec",
         "runtimes/osx-x64/native/ClearScriptV8.osx-x64.dylib"
+      ]
+    },
+    "Microsoft.ClearScript.V8.Native.win-x64/7.3.7": {
+      "sha512": "Rkq3YMqBD+ax3dYhZ0KGa+tKifVdbokQQpwW5lmhlzb7VfKik1IcDMsWGytegB4PNJBWUEJT3bJau0e3GtGZMg==",
+      "type": "package",
+      "path": "microsoft.clearscript.v8.native.win-x64/7.3.7",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License.txt",
+        "build/Microsoft.ClearScript.V8.Native.win-x64.props",
+        "images/ClearScript.png",
+        "licenses/ClearScript/License.txt",
+        "licenses/V8/LICENSE",
+        "licenses/V8/LICENSE.fdlibm",
+        "licenses/V8/LICENSE.strongtalk",
+        "licenses/V8/LICENSE.v8",
+        "microsoft.clearscript.v8.native.win-x64.7.3.7.nupkg.sha512",
+        "microsoft.clearscript.v8.native.win-x64.nuspec",
+        "runtimes/win-x64/native/ClearScriptV8.win-x64.dll",
+        "tools/Install.ps1",
+        "tools/Uninstall.ps1"
+      ]
+    },
+    "Microsoft.ClearScript.V8.Native.win-x86/7.3.7": {
+      "sha512": "LkLBll4QI+9ph/CQlgvEOxewEZxEiGr0B8KGlF3US8+41x8Dydy5C+pTq1fYgBeTqjrLxNzIbcAK+295ReMxrg==",
+      "type": "package",
+      "path": "microsoft.clearscript.v8.native.win-x86/7.3.7",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License.txt",
+        "build/Microsoft.ClearScript.V8.Native.win-x86.props",
+        "images/ClearScript.png",
+        "licenses/ClearScript/License.txt",
+        "licenses/V8/LICENSE",
+        "licenses/V8/LICENSE.fdlibm",
+        "licenses/V8/LICENSE.strongtalk",
+        "licenses/V8/LICENSE.v8",
+        "microsoft.clearscript.v8.native.win-x86.7.3.7.nupkg.sha512",
+        "microsoft.clearscript.v8.native.win-x86.nuspec",
+        "runtimes/win-x86/native/ClearScriptV8.win-x86.dll",
+        "tools/Install.ps1",
+        "tools/Uninstall.ps1"
       ]
     },
     "Microsoft.CodeAnalysis.Analyzers/3.0.0": {
@@ -9121,6 +9191,8 @@
       "Microsoft.ClearScript.Core >= 7.3.7",
       "Microsoft.ClearScript.V8 >= 7.3.7",
       "Microsoft.ClearScript.V8.Native.osx-x64 >= 7.3.7",
+      "Microsoft.ClearScript.V8.Native.win-x64 >= 7.3.7",
+      "Microsoft.ClearScript.V8.Native.win-x86 >= 7.3.7",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.17",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.17",
       "Microsoft.Extensions.Localization >= 5.0.17",
@@ -9132,32 +9204,34 @@
     ]
   },
   "packageFolders": {
-    "/Users/celsosilvestre/.nuget/packages/": {}
+    "C:\\Users\\CSilvestre\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/celsosilvestre/Documents/factory-minimal-edge/factory-minimal-edge/factory-minimal-edge-ui/factory-minimal-edge-ui.csproj",
+      "projectUniqueName": "C:\\Users\\CSilvestre\\GitLab\\factory-minimal-edge\\factory-minimal-edge\\factory-minimal-edge-ui\\factory-minimal-edge-ui.csproj",
       "projectName": "factory-minimal-edge-ui",
-      "projectPath": "/Users/celsosilvestre/Documents/factory-minimal-edge/factory-minimal-edge/factory-minimal-edge-ui/factory-minimal-edge-ui.csproj",
-      "packagesPath": "/Users/celsosilvestre/.nuget/packages/",
-      "outputPath": "/Users/celsosilvestre/Documents/factory-minimal-edge/factory-minimal-edge/factory-minimal-edge-ui/obj/",
+      "projectPath": "C:\\Users\\CSilvestre\\GitLab\\factory-minimal-edge\\factory-minimal-edge\\factory-minimal-edge-ui\\factory-minimal-edge-ui.csproj",
+      "packagesPath": "C:\\Users\\CSilvestre\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\CSilvestre\\GitLab\\factory-minimal-edge\\factory-minimal-edge\\factory-minimal-edge-ui\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/celsosilvestre/.config/NuGet/NuGet.Config"
+        "C:\\Users\\CSilvestre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "/Users/celsosilvestre/Documents/factory-minimal-edge/factory-minimal-edge/factory-minimal-edge-models/factory-minimal-edge-models.csproj": {
-              "projectPath": "/Users/celsosilvestre/Documents/factory-minimal-edge/factory-minimal-edge/factory-minimal-edge-models/factory-minimal-edge-models.csproj"
+            "C:\\Users\\CSilvestre\\GitLab\\factory-minimal-edge\\factory-minimal-edge\\factory-minimal-edge-models\\factory-minimal-edge-models.csproj": {
+              "projectPath": "C:\\Users\\CSilvestre\\GitLab\\factory-minimal-edge\\factory-minimal-edge\\factory-minimal-edge-models\\factory-minimal-edge-models.csproj"
             }
           }
         }
@@ -9208,6 +9282,14 @@
             "target": "Package",
             "version": "[7.3.7, )"
           },
+          "Microsoft.ClearScript.V8.Native.win-x64": {
+            "target": "Package",
+            "version": "[7.3.7, )"
+          },
+          "Microsoft.ClearScript.V8.Native.win-x86": {
+            "target": "Package",
+            "version": "[7.3.7, )"
+          },
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
             "version": "[5.0.17, )"
@@ -9255,7 +9337,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.408/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
       }
     }
   }

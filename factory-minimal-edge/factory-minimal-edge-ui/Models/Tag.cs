@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.ClearScript;
+using Microsoft.ClearScript.JavaScript;
+using Microsoft.ClearScript.V8;
 
 namespace factory_minimal_edge_ui.Models
 {
     public class Tag
     {
+        public int Id { get; set; }
         public string TagSource { get; set; }
         public string TagName { get; set; }
         public string TagPath { get { return TagSource + "/" + TagName; } }
@@ -14,7 +18,7 @@ namespace factory_minimal_edge_ui.Models
         public bool CalculatedTag { get; set; }
         public DateTime TagValueDateTime { get; set; }
         public object DataType { get; set; }
-        public string CalculationExpression { get; set; }
+        public string Script { get; set; }
 
         public Tag(string VarName)
         {
@@ -58,8 +62,23 @@ namespace factory_minimal_edge_ui.Models
 
         private void Calculate(object newValue)
         {
-            // Code to parse the calculation Expressions and get back the new value to the variable
-            TagValue = newValue;
+            object returnValue = null;
+
+            using (var engine = new V8ScriptEngine())
+            {
+                engine.AddHostType("Console", typeof(Console));
+                engine.AddHostObject("random", new Random());
+                engine.AddHostObject("lib", new HostTypeCollection("mscorlib", "System.Core"));
+
+                engine.Script.input = newValue;
+
+                engine.Execute(Script);
+
+                returnValue = engine.Script.output;
+            }
+
+            TagValue = returnValue;
+
         }
     }
 }
